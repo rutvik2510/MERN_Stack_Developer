@@ -1,0 +1,81 @@
+<!----  Create an ordered list (ol) with three levels of nesting. 
+Apply a class to the second level items and give them a different text color using CSS.
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nested ordered list</title>
+    <style>
+        .ordered_nested_list {
+            width: 100%;
+            margin: 10px;
+            padding: 5px;
+        }
+        
+        .ordered_nested_list,
+        .first_level,
+        .second_level_list,
+        .third_level_list {
+            margin: 5px;
+            padding: 4px;
+        }
+        
+        .first_level {
+            background-color: #ce6a6c;
+            list-style-type: decimal;
+        }
+        
+        .second_level_list {
+            background-color: #edade3;
+            list-style-type: lower-roman;
+        }
+        
+        .third_level_list {
+            background-color: #f9c7be;
+            list-style-type: disc;
+        }
+    </style>
+</head>
+
+<body>
+    <ol class="ordered_nested_list">
+        <li class="first_level">product</li>
+        <li class="first_level">fruits</li>
+        <ol>
+            <li class="second_level_list">mango</li>
+            <li class="second_level_list">banana</li>
+            <li class="second_level_list">apple</li>
+            <li class="second_level_list">graps</li>
+        </ol>
+        <li class="first_level">animals</li>
+        <ol>
+            <li class="second_level_list">wild animals</li>
+            <ol>
+                <li class="third_level_list">tiger</li>
+                <li class="third_level_list">lion</li>
+                <li class="third_level_list">elephant</li>
+                <li class="third_level_list">fox</li>
+            </ol>
+            <li class="second_level_list">pet animals</li>
+            <ol>
+                <li class="third_level_list">dog</li>
+                <li class="third_level_list">cat</li>
+                <li class="third_level_list">monkey</li>
+                <li class="third_level_list">parrote</li>
+            </ol>
+        </ol>
+        <li class="first_level">birds</li>
+        <ol>
+            <li class="second_level_list">picock</li>
+            <li class="second_level_list">parrote</li>
+            <li class="second_level_list">sparow</li>
+        </ol>
+    </ol>
+
+</body>
+
+</html>

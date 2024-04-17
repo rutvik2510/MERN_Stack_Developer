@@ -1,0 +1,76 @@
+<!---- Design an unordered list (ul) with six items representing different cities.
+ Add an id attribute to each item and apply different background images to each 
+list item using CSS.-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ul use background images</title>
+    <style>
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        .city_item {
+            margin: 10px 0;
+            padding: 10rem;
+            font-size: medium;
+            font-weight: bold;
+            text-align: center;
+            background-size: cover;
+        }
+        
+        #city1 {
+            background-image: url('img/first-removebg-preview.png');
+            height: 100px;
+            width: 100px;
+        }
+        
+        #city2 {
+            background-image: url("img/first.png");
+            height: 100px;
+            width: 100px;
+        }
+        
+        #city3 {
+            background-image: url("img/fourth.png");
+            height: 100px;
+            width: 100px;
+        }
+        
+        #city4 {
+            background-image: url("img/third.png");
+            height: 100px;
+            width: 100px;
+        }
+        
+        #city5 {
+            background-image: url("img/first-removebg-preview.png");
+            height: 100px;
+            width: 100px;
+        }
+        
+        #city6 {
+            background-image: url("img/first.png");
+            height: 100px;
+            width: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li id="city1" class="city_item">kolhapur</li>
+        <li id="city2" class="city_item">sangli</li>
+        <li id="city3" class="city_item">pune</li>
+        <li id="city4" class="city_item">mumbai</li>
+        <li id="city5" class="city_item">nashik</li>
+        <li id="city6" class="city_item">nagar</li>
+    </ul>
+</body>
+
+</html>

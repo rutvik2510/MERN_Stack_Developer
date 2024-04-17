@@ -1,0 +1,75 @@
+<!-- Construct a table to display student grades. 
+Include four columns: Student Name, Math, Science, and English. 
+Add a class attribute to the table and apply alternating background colors 
+to the rows using CSS.-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .table_content {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        
+        .table_content th,
+        .table_content td {
+            border: 2px solid black;
+            padding: 4px;
+            text-align: center;
+        }
+        
+        .table_content th {
+            background-color: #f2f2f2;
+        }
+        
+        .table_content tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        
+        .table_content tr:nth-child(odd) {
+            background-color: #e6e6e6;
+        }
+    </style>
+</head>
+
+<body>
+    <table class="table_content">
+        <thead>
+            <tr>
+                <th>Student Name</th>
+                <th>Math</th>
+                <th>Science</th>
+                <th>English</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>abc</td>
+                <td>88</td>
+                <td>78</td>
+                <td>90</td>
+            </tr>
+            <tr>
+                <td>lmn</td>
+                <td>78</td>
+                <td>89</td>
+                <td>87</td>
+            </tr>
+            <tr>
+                <td>pqr</td>
+                <td>87</td>
+                <td>98</td>
+                <td>92</td>
+            </tr>
+        </tbody>
+
+    </table>
+
+</body>
+
+</html>

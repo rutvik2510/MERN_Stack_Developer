@@ -1,0 +1,56 @@
+<!-- Create a table with two columns and three rows. Add a class attribute to the table and apply a border to it
+using CSS -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .table_border {
+            border-collapse: collapse;
+            width: 100%;
+            border: 2px solid black;
+            margin: 2px;
+        }
+        
+        .table_border th,
+        .table_border td {
+            border: 2px solid black;
+            text-align: center;
+            padding: 2px;
+        }
+        
+        th {
+            background-color: purple;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <table class="table_border">
+        <tr>
+            <th>column 1</th>
+            <th>column 2</th>
+        </tr>
+        <tr>
+            <td>A</td>
+            <td>B</td>
+        </tr>
+        <tr>
+
+            <td>C</td>
+            <td>D</td>
+        </tr>
+        <tr>
+            <td>E</td>
+            <td>F</td>
+        </tr>
+    </table>
+
+</body>
+
+</html>

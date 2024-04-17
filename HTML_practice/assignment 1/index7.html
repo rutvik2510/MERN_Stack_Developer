@@ -1,0 +1,78 @@
+<!---
+Build a table to showcase product details. 
+Include columns for Product Name, Price, and Description. 
+Assign a class to the table and style it with a border, 
+background color, and font size using CSS.
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .table_content {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0 0 0;
+        }
+        
+        .table_content th,
+        .table_content td {
+            border: 2px solid black;
+            padding: 4px;
+            text-align: left;
+        }
+        
+        .table_content th {
+            background-color: brown;
+            color: white;
+        }
+        
+        .table_content tr:nth-child(even) {
+            background-color: lightgray;
+        }
+        
+        .table_content tr:nth-child(odd) {
+            background-color: darkgray;
+        }
+        
+        .table_content td {
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <table class="table_content">
+        <thead>
+            <tr>
+                <th>Product Name</th>
+                <th>Product Price</th>
+                <th>product Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Product A</td>
+                <td>55$</td>
+                <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
+            </tr>
+            <tr>
+                <td>Product B</td>
+                <td>78$</td>
+                <td>Integer euismod justo id magna consequat, ac consequat elit.</td>
+            </tr>
+            <tr>
+                <td>Product C</td>
+                <td>89$</td>
+                <td>Sed eget dolor vel mauris sodales volutpat eu vel nisi.</td>
+            </tr>
+
+        </tbody>
+    </table>
+</body>
+
+</html>
