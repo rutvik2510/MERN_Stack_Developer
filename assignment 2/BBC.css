@@ -1,0 +1,124 @@
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    body {
+        background-color: #eeeeee;
+    }
+    
+    nav {
+        height: 70px;
+        width: 100%;
+        background-color: black;
+        margin: 0;
+        display: flex;
+        position: relative;
+    }
+    
+    nav a {
+        cursor: pointer;
+    }
+    
+    .nav_content {
+        display: flex;
+    }
+    
+    .navbar .nav_icon {
+        border: 2px solid rgb(255, 255, 255);
+        height: 50px;
+        width: 150px;
+        margin: 10px;
+        align-items: center;
+    }
+    
+    .navbar .nav_icon svg {
+        background-color: white;
+        width: 150px;
+        height: 50px;
+    }
+    
+    .navbar .nav_icon text {
+        font-weight: 500;
+        font-size: 40px;
+    }
+    
+    .nav_user_icon {
+        height: 60px;
+        color: white;
+        margin: 25px 50px;
+    }
+    
+    .nav_list ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        position: relative;
+        list-style-type: none;
+        margin-left: 10px;
+        width: 100%;
+        font-size: 17px;
+        font-weight: 700;
+        height: 70px;
+    }
+    
+    .nav_list .list_item {
+        border-left: 0.1px solid rgba(255, 255, 255, 0.815);
+        height: 70px;
+    }
+    
+    .nav_list .border1 {
+        border-right: 0.1px solid rgba(255, 255, 255, 0.815);
+    }
+    
+    .nav_list ul li {
+        text-align: center;
+        padding-top: 20px;
+    }
+    
+    .nav_list a {
+        text-decoration: none;
+        color: white;
+        margin-right: 20px;
+        padding-left: 30px;
+        /* border-left: 2px s olid white; */
+    }
+    
+    .nav_list a span {
+        margin-right: 50px;
+    }
+    
+    .search_bar {
+        display: flex;
+        height: 40px;
+        width: 120px;
+        margin-left: 30px;
+        margin-top: 15px;
+    }
+    
+    .search_bar input {
+        border-top-left-radius: 30px;
+        border-bottom-left-radius: 30px;
+        padding: 20px;
+        border-right: none;
+    }
+    
+    .search_bar a {
+        background-color: white;
+        height: 40px;
+        width: 60px;
+        margin-top: 2px;
+        border-left: none;
+        border-top-right-radius: 30px;
+        border-bottom-right-radius: 30px;
+    }
+    
+    .search_bar i {
+        text-align: center;
+        margin-top: 12px;
+        margin-right: 20px;
+        border-top-right-radius: 30px;
+        border-bottom-right-radius: 30px;
+        font-size: 20px;
+        font-weight: 900;
+    }

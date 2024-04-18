@@ -1,0 +1,98 @@
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    body {
+        background-color: black;
+    }
+    
+    nav {
+        background-color: white;
+        height: 60px;
+        width: 100%;
+    }
+    
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 60px;
+        width: 100%;
+    }
+    
+    .nav_logo_searchbar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .logo {
+        height: 40px;
+        width: 200px;
+        margin: 0px 20px;
+    }
+    
+    .logo img {
+        height: 40px;
+        width: 200px;
+        border-radius: 3px;
+        align-items: center;
+    }
+    
+    .search_bar {
+        height: 30px;
+        width: 250px;
+        background-color: rgb(245, 245, 245);
+        border: 1px solid rgb(170, 168, 168);
+        border-radius: 5px;
+    }
+    
+    .search_bar a i {
+        background-color: rgb(245, 245, 245);
+        font-size: 15px;
+        font-weight: 700;
+        text-decoration: none;
+        color: rgba(0, 0, 0, 0.6);
+        margin-top: 7px;
+        text-align: center;
+        padding-left: 30%;
+    }
+    
+    .search_bar input {
+        border: none;
+        background-color: rgb(245, 245, 245);
+        margin-left: 3px;
+    }
+    
+    a {
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+    }
+    
+    .nav_items ul {
+        list-style-type: none;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    
+    .list_item {
+        height: 60px;
+        width: 60px;
+        margin-left: 15px;
+        padding-top: 2px;
+    }
+    
+    .home_icon_id {
+        font-size: 20px;
+        text-align: center;
+        font-weight: 500;
+        margin-top: 4px;
+    }
+    
+    .home_text_id {
+        text-align: center;
+        font-weight: 200;
+        font-size: 12px;
+        margin-top: 2px;
+    }
