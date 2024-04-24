@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        
+        #clock-container {
+            text-align: center;
+        }
+        
+        #digital-clock {
+            font-size: 36px;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        #analog-clock {
+            width: 200px;
+            height: 200px;
+            border: 8px solid #333;
+            border-radius: 50%;
+            position: relative;
+        }
+        
+        #hour,
+        #minute,
+        #second {
+            position: absolute;
+            width: 50%;
+            height: 2px;
+            background: #333;
+            top: 50%;
+            transform-origin: 100%;
+            transform: rotate(90deg);
+        }
+        
+        #minute {
+            height: 1.5px;
+            background: #555;
+        }
+        
+        #second {
+            height: 1px;
+            background: #ff0000;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="clock-container">
+        <div id="digital-clock"></div>
+        <div id="analog-clock">
+            <div id="hour"></div>
+            <div id="minute"></div>
+            <div id="second"></div>
+        </div>
+    </div>
+    <script>
+        function setTimeout1() {
+            time = document.getElementById('digital-clock');
+
+            function displaytime() {
+                const now = new Date();
+                const hours = now.getHours();
+                const minutes = now.getMinutes();
+                const seconds = now.getSeconds();
+                time.innerHTML = `${hours} : ${minutes} : ${seconds}`;
+
+                const hourDegrees = (hours % 12 + minutes / 60) * 360 / 12;
+                const minuteDegrees = (minutes + seconds / 60) * 360 / 60;
+                const secondDegrees = seconds * 360 / 60;
+
+                document.getElementById('hour').style.transform = `rotate(${hourDegrees}deg)`;
+                document.getElementById('minute').style.transform = `rotate(${minuteDegrees}deg)`;
+                document.getElementById('second').style.transform = `rotate(${secondDegrees}deg)`;
+
+            }
+            timer = setInterval(displaytime, 1000);
+        }
+        setTimeout1();
+    </script>
+</body>
+
+</html>
