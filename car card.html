@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>car card</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f4f4f4;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        
+        .color-picker {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: rgba(179, 176, 176, 0.561);
+            height: 500px;
+            width: 400px;
+            padding: 5px;
+            border-radius: 20px;
+        }
+        
+        #car-container {
+            margin: 20px;
+        }
+        
+        .infocar {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-items: flex-start;
+            margin-left: 5px;
+            width: auto;
+        }
+        
+        .btncontent {
+            display: flex;
+            /* flex-direction: column; */
+            gap: 5px;
+            margin-right: 10px;
+        }
+        
+        button {
+            border-radius: 50px;
+        }
+        
+        img {
+            border-radius: 8px;
+            height: 180px;
+            width: 300px;
+            box-shadow: 0 4px 8px 0 rgb(150, 178, 194), 0 6px 20px 0 rgba(150, 178, 194, 0.411);
+        }
+        
+        #btnpurple {
+            background-color: purple;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="color-picker ">
+        <div id="car-container">
+            <img src="img/red.jpeg" alt="Car" id="carImage">
+
+        </div>
+        <div class="infocar">
+            <div>
+                <h3 id="carname">Ferrari SF90 Stradale</h3>
+            </div>
+            <div><label>mileage : </label>
+                <span id="mileage">18km/h</span>
+            </div>
+            <div><label>fuel : </label>
+                <span id="fuel">Petrol</span></div>
+            <div><label>safety : </label>
+                <span id="safety">8.5/10</span></div>
+        </div>
+        <div>
+            <p>choose the car color :</p><br>
+            <div class="btncontent  col-2 ">
+                <button onclick="changeColor('red')" class="btn btn-danger btn-lg border border-dark "></button>
+                <button onclick="changeColor('blue')" class="btn btn-primary btn-lg border border-dark btn-circle"></button>
+                <button onclick="changeColor('black')" class="btn btn-dark btn-lg border border-dark"></button>
+                <button onclick="changeColor('purple')" id="btnpurple" class="btn btn-lg border border-dark"></button>
+                <button onclick="changeColor('white')" class="btn bg-light btn-lg border border-dark"></button>
+                <button onclick="changeColor('yellow')" class="btn bg-warning btn-lg border border-dark"></button>
+
+            </div>
+        </div>
+    </div>
+    <script>
+        function changeColor(color) {
+            const carImage = document.getElementById('carImage');
+            const carname = document.getElementById('carname');
+            const mileage = document.getElementById('mileage');
+            const fuel = document.getElementById('fuel');
+            const safety = document.getElementById('safety');
+
+
+
+            carImage.src = `img/${color}.jpeg`;
+
+            // if (color === 'green') {
+            //     carImage.style.filter = 'grayscale(50%)';
+            // } else {
+            //     carImage.style.filter = 'none';
+            // }
+            switch (color) {
+                case 'red':
+                    carImage.style.filter = 'grayscale(50%)';
+                    carname.innerHTML = `Ferrari SF90 Stradale`;
+                    mileage.innerHTML = `18 KM/L`;
+                    fuel.innerHTML = `Petrol`;
+                    safety.innerHTML = `8.5/10`;
+                    break;
+                case 'blue':
+                    carImage.style.filter = 'grayscale(50%)';
+                    carname.innerHTML = `Rolls-Royce Phantom`;
+                    mileage.innerHTML = `7.2 KM/L`;
+                    fuel.innerHTML = `Petrol`;
+                    safety.innerHTML = `7.1/10`;
+                    break;
+                case 'black':
+                    carImage.style.filter = 'grayscale(50%)';
+                    carname.innerHTML = `Bentley Bentayga`;
+                    mileage.innerHTML = `10 KM/L`;
+                    fuel.innerHTML = `Petrol`;
+                    safety.innerHTML = `8/10`;
+                    break;
+                case 'purple':
+                    carImage.style.filter = 'grayscale(50%)';
+                    carname.innerHTML = `Tata Harrier`;
+                    mileage.innerHTML = `12 KM/L`;
+                    fuel.innerHTML = `Petrol`;
+                    safety.innerHTML = `9/10`;
+                    break;
+                case 'white':
+                    carImage.style.filter = 'grayscale(50%)';
+                    carname.innerHTML = `jaguar xf`;
+                    mileage.innerHTML = `15 KM/L`;
+                    fuel.innerHTML = `Petrol`;
+                    safety.innerHTML = `7.9/10`;
+                    break;
+                case 'yellow':
+                    carImage.style.filter = 'grayscale(50%)';
+                    carname.innerHTML = `lamborghini`;
+                    mileage.innerHTML = `7 KM/L`;
+                    fuel.innerHTML = `Petrol`;
+                    safety.innerHTML = `8.8/10`;
+                    break;
+                default:
+                    carImage.style.filter = 'none';
+                    break;
+
+            }
+        }
+    </script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+
+</html>
+
+</html>
